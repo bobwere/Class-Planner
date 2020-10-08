@@ -1,0 +1,71 @@
+name: class_planner
+description: A new class timetable project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #local storage
+  shared_preferences: ^0.5.10
+
+  #icons
+  cupertino_icons: ^0.1.3
+  line_awesome_flutter: ^1.0.1
+
+  #animation handlers
+  flutter_staggered_animations: ^0.1.2
+  animation_director: ^0.1.1
+  animations: ^1.1.2
+
+  #cloud firestore
+  cloud_firestore: ^0.14.1+2
+
+  #responsiveness of the app
+  responsive_widgets: ^2.0.1
+
+  #state_mangaement
+  flutter_bloc: ^6.0.5
+
+  #calender
+  calendar_strip: ^1.0.6
+
+  #google calednder api
+  googleapis: ^0.55.0
+  googleapis_auth: ^0.2.12
+  url_launcher: ^5.7.2
+
+  #miscellaneous
+  dart_random_choice: ^0.0.2
+  data_connection_checker: ^0.3.4
+  flushbar: ^1.10.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  device_preview: ^0.4.8
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/onboarding_page.png
+    - assets/images/logo.png
+
+  fonts:
+    - family: Avenir
+      fonts:
+        - asset: assets/fonts/Avenir_Next_Pro/AvenirLTStd-Black.otf
+          weight: 900
+        - asset: assets/fonts/Avenir_Next_Pro/AvenirLTStd-Heavy.otf
+          weight: 800
+        - asset: assets/fonts/Avenir_Next_Pro/AvenirLTStd-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Avenir_Next_Pro/AvenirLTStd-Book.otf
+          weight: 400
+        - asset: assets/fonts/Avenir_Next_Pro/AvenirLTStd-Light.otf
+          weight: 300

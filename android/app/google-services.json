@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1082627845787",
+    "firebase_url": "https://classplanner-6d0cb.firebaseio.com",
+    "project_id": "classplanner-6d0cb",
+    "storage_bucket": "classplanner-6d0cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082627845787:android:a938b1c0ac22d3e4fea03e",
+        "android_client_info": {
+          "package_name": "com.swyype.class_planner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082627845787-totqm538e3tfqcv0qsvllk876t2l0vc7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.swyype.class_planner",
+            "certificate_hash": "800243a041bab9a159fa1eea316f57903ecacd96"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeOYKUtoZZvoLl8WiSy7RU-_1106dxC0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
