@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: colorScheme.primary,
         onPressed: () {
+          //navigation
           Navigator.of(context).pushNamed('/creategoogleeventpage');
         },
         child: Icon(Icons.add, color: Colors.white),
