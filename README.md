@@ -2,6 +2,10 @@
 
 Class planner is a mobile app that digitises the manual school timetable to better organise a students daily schedule by displaying list of lesson available on specific day based on course selected.  
 
-## Getting Started
+## Installation
 
-https://github.com/bobwere/Class-Planner/blob/master/assets/images/logo.png
+## Designs
+![](screenshots/splashpage.png)
+![](screenshots/onboardingpage.png)
+![](screenshots/homepage.png)
+![](screenshots/createnote.png)
