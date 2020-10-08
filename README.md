@@ -4,3 +4,4 @@ Class planner is a mobile app that digitises the manual school timetable to bett
 
 ## Getting Started
 
+https://github.com/bobwere/Class-Planner/blob/master/assets/images/logo.png
