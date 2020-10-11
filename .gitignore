@@ -42,4 +42,5 @@ app.*.map.json
 
 *google-services.json
 *key.jks
+*nutella.jks
 *key.properties

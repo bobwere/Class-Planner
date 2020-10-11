@@ -253,6 +253,7 @@ class _CreateGoogleEventFormWidgetState
     );
   }
 
+//SELECT DATE METHOD
   _selectDate(BuildContext context) async {
     final DateTime picked = await showDatePicker(
       context: context,
@@ -268,6 +269,7 @@ class _CreateGoogleEventFormWidgetState
     }
   }
 
+//SELECT START TIME METHOD
   _selectStartTime(BuildContext context) async {
     final TimeOfDay picked = await showTimePicker(
       context: context,
@@ -292,6 +294,7 @@ class _CreateGoogleEventFormWidgetState
     }
   }
 
+//SELECT END TIME METHOD
   _selectEndTime(BuildContext context) async {
     final TimeOfDay picked = await showTimePicker(
       context: context,
@@ -316,6 +319,7 @@ class _CreateGoogleEventFormWidgetState
     }
   }
 
+  //CREATE NEW NOTE ON YOUR GOOGLE CALENDER
   createNewEvent(BuildContext context, String title, String description,
       DateTime startTime, DateTime endTime) {
     final createGoogleCalenderEventCubit =

@@ -85,11 +85,13 @@ class BottomHalfDescriptionWidget extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(15))),
                     color: Theme.of(context).primaryColor,
                     textColor: Colors.white,
-                    child: TextResponsive('Let\'s Get Started',
-                        style: TextStyle(
-                          fontSize: 40,
-                          fontFamily: 'Avenir',
-                        )),
+                    child: TextResponsive(
+                      'Let\'s Get Started',
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontFamily: 'Avenir',
+                      ),
+                    ),
                   ),
                 ),
               ),
