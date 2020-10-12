@@ -17,8 +17,12 @@ class ClassesRepository implements IClassesFacade {
         .doc(course)
         .collection(day)
         .orderBy('order')
-        .get();
-
+        .get(GetOptions(source: Source.server))
+        .timeout(Duration(seconds: 2))
+        .catchError((e) {
+      print('Exception occurs: $e');
+      throw e;
+    });
     List<Classes> classes = classesDocRef.docs.map((snapshot) {
       return Classes.fromJson(
         snapshot.data(),

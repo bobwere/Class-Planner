@@ -1,6 +1,6 @@
+import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:class_planner/common/util/int_to_weekday_string.dart';
-import 'package:class_planner/common/util/internet_connection.dart';
 import 'package:class_planner/src/data/models/classes_model.dart';
 import 'package:class_planner/src/data/repository/classes_repository.dart';
 import 'package:meta/meta.dart';
@@ -19,7 +19,9 @@ class ClassesCubit extends Cubit<ClassesState> {
   var defaultcourse = 'economics';
   var defaultday = convertToDayOfWeek(DateTime.now().weekday);
 
-  Future<void> getClasses({String course, int day}) async {
+  //get classes from firebase
+  void getClasses({String course, int day}) async {
+    //determine selected course by user
     var selectedcourse;
     if (course == null) {
       selectedcourse = defaultcourse;
@@ -28,6 +30,7 @@ class ClassesCubit extends Cubit<ClassesState> {
       defaultcourse = course;
     }
 
+    //determine selected day by user
     var selectedday;
     if (day == null) {
       selectedday = defaultday;
@@ -40,19 +43,16 @@ class ClassesCubit extends Cubit<ClassesState> {
       emit(NoClassesFound());
     } else {
       emit(ClassesLoading());
-      final internetStatus = await isConnected();
+      try {
+        final classes = await _iClassesFacade.getClassDetails(
+            course: selectedcourse, day: selectedday);
 
-      if (!internetStatus) {
-        emit(ClassesError("No internet connection"));
-      } else {
-        try {
-          final classes = await _iClassesFacade.getClassDetails(
-              course: selectedcourse, day: selectedday);
-
-          emit(ClassesLoaded(classes));
-        } catch (e) {
-          emit(ClassesError("Server Error"));
-        }
+        emit(ClassesLoaded(classes));
+      } on TimeoutException catch (_) {
+        emit(
+            ClassesError('No internet connection, reconnect and tap to retry'));
+      } catch (_) {
+        emit(ClassesError('Server Error tap to retry'));
       }
     }
   }

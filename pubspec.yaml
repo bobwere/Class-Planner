@@ -48,6 +48,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   device_preview: ^0.4.8
+  bloc_test: ^7.0.6
 
 flutter:
   uses-material-design: true

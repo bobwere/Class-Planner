@@ -34,7 +34,7 @@ class CreateGoogleEventPage extends StatelessWidget {
           elevation: 0,
           centerTitle: true,
           title: TextResponsive(
-            'Create Note On Your Calender',
+            'Create Note On Your Calendar',
             style: TextStyle(
               fontSize: 40,
               fontWeight: FontWeight.w800,

@@ -152,7 +152,7 @@ class BottomTimelineWidget extends StatelessWidget {
                 ),
               ),
               child: TextResponsive(
-                '$message check your connection and tap to retry',
+                message,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'Avenir',
