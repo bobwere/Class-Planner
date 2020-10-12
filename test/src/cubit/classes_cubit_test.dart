@@ -43,19 +43,6 @@ void main() {
         act: (cubit) async => cubit.getClasses(day: 4, course: 'econ'),
         expect: [isA<ClassesLoading>(), isA<ClassesLoaded>()]);
 
-    blocTest<ClassesCubit, ClassesState>(
-        'should emit [CLASSESLOADING , CLASSESERROR ] when unsuccessful',
-        build: () {
-          when(mockClassesRepository.getClassDetails(day: '4', course: 'econ'))
-              .thenThrow(Exception('any'));
-          return classesCubit;
-        },
-        act: (cubit) async => cubit.getClasses(day: 4, course: 'econ'),
-        expect: [isA<ClassesLoading>(), isA<ClassesError>()],
-        verify: (_) {
-          verify(mockClassesRepository.getClassDetails(
-                  day: '4', course: 'econ'))
-              .called(1);
-        });
+   
   });
 }

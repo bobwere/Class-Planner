@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_widgets/responsive_widgets.dart';
 
 /*
-  Calender Widget  
+  Calender Strip Widget  
  */
 class TopCalenderWidget extends StatefulWidget {
   const TopCalenderWidget({Key key}) : super(key: key);
@@ -19,11 +19,6 @@ class _TopCalenderWidgetState extends State<TopCalenderWidget> {
   DateTime startDate = DateTime.now().subtract(Duration(days: 2));
   DateTime endDate = DateTime.now().add(Duration(days: 90));
   DateTime selectedDate = DateTime.now().subtract(Duration(days: 0));
-  List<DateTime> markedDates = [
-    DateTime.now().subtract(Duration(days: 1)),
-    DateTime.now().subtract(Duration(days: 2)),
-    DateTime.now().add(Duration(days: 4))
-  ];
 
   onSelect(DateTime date) {
     getClasses(context, date.weekday);
@@ -49,22 +44,6 @@ class _TopCalenderWidgetState extends State<TopCalenderWidget> {
     );
   }
 
-  getMarkedIndicatorWidget() {
-    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-      ContainerResponsive(
-        margin: EdgeInsets.only(left: 1, right: 1),
-        width: 5,
-        height: 5,
-        decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.red),
-      ),
-      ContainerResponsive(
-        width: 5,
-        height: 5,
-        decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.blue),
-      )
-    ]);
-  }
-
   dateTileBuilder(
       date, selectedDate, rowIndex, dayName, isDateMarked, isDateOutOfRange) {
     bool isSelectedDate = date.compareTo(selectedDate) == 0;
@@ -84,10 +63,6 @@ class _TopCalenderWidgetState extends State<TopCalenderWidget> {
           style: !isSelectedDate ? normalStyle : selectedStyle),
     ];
 
-    if (isDateMarked == true) {
-      //  _children.add(getMarkedIndicatorWidget());
-    }
-
     return AnimatedContainer(
       duration: Duration(milliseconds: 150),
       alignment: Alignment.topCenter,
@@ -106,7 +81,7 @@ class _TopCalenderWidgetState extends State<TopCalenderWidget> {
 
   @override
   Widget build(BuildContext context) {
-    //Container with calender widget
+    //Container with calender strip widget
     return Container(
       height: MediaQuery.of(context).size.height * 0.23,
       padding: EdgeInsetsResponsive.fromLTRB(0, 30, 0, 0),
@@ -121,7 +96,6 @@ class _TopCalenderWidgetState extends State<TopCalenderWidget> {
           dateTileBuilder: dateTileBuilder,
           iconColor: Colors.white,
           monthNameWidget: _monthNameWidget,
-          markedDates: markedDates,
           containerDecoration: BoxDecoration(color: Colors.transparent),
           addSwipeGesture: true,
         ),

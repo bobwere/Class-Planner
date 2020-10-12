@@ -4,6 +4,9 @@ import 'package:class_planner/src/data/models/classes_model.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import 'package:responsive_widgets/responsive_widgets.dart';
 
+/*
+class details description widget
+ */
 class ClassDetailDescriptionWidget extends StatelessWidget {
   const ClassDetailDescriptionWidget({Key key, @required this.classes})
       : super(key: key);
@@ -21,6 +24,7 @@ class ClassDetailDescriptionWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              //Class starttime and end time
               SizedBoxResponsive(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -38,6 +42,8 @@ class ClassDetailDescriptionWidget extends StatelessWidget {
                   ),
                 ],
               ),
+
+              //class location / lecturer room
               SizedBoxResponsive(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -55,6 +61,8 @@ class ClassDetailDescriptionWidget extends StatelessWidget {
                   ),
                 ],
               ),
+
+              //class lecturer name
               SizedBoxResponsive(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,

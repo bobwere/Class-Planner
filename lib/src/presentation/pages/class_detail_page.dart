@@ -3,6 +3,11 @@ import 'package:class_planner/src/presentation/widgets/class_detail_page_widgets
 import 'package:flutter/material.dart';
 import 'package:responsive_widgets/responsive_widgets.dart';
 
+/*
+
+===class detail page 
+
+*/
 class ClassDetailPage extends StatelessWidget {
   const ClassDetailPage({Key key, @required this.classes}) : super(key: key);
 

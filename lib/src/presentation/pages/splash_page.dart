@@ -25,8 +25,8 @@ class _SplashPageState extends State<SplashPage> {
     //Enable app to be responsive to different screen resolutions initialised only once at the root page of the app *splashpage*
     ResponsiveWidgets.init(
       context,
-      height: 480, //base height
-      width: 854, //base width
+      height: 480, //base height itel A33
+      width: 854, //base width  itel A33
       allowFontScaling: false,
     );
 
@@ -70,7 +70,7 @@ class _SplashPageState extends State<SplashPage> {
         : Navigator.of(context).popAndPushNamed('/homepage');
   }
 
-  //method to retrieve data from firebase
+  //method to retrieve data(days lesson) from firebase
   void getClasses(BuildContext context) {
     final classesCubit = BlocProvider.of<ClassesCubit>(context);
     classesCubit.getClasses();

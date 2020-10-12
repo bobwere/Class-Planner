@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /*
-get started page inform user the intentions of this app before they
+onboarding page inform user the intentions of this app before they
 start using it
-====To Be shown only once when the app is opened for the first time=====
+====N/B  To Be shown only once when the app is opened for the first time=====
 */
 
 class OnboardingPage extends StatefulWidget {

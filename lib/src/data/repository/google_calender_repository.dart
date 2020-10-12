@@ -30,7 +30,8 @@ class GoogleCalenderRepository implements IGoogleCalenderFacade {
       }
     }
 
-    AuthClient client = await clientViaUserConsent(_clientID, _scopes, prompt);
+    AuthClient client = await clientViaUserConsent(_clientID, _scopes, prompt)
+        .catchError((e) => throw e);
 
     var calendar = CalendarApi(client);
 
@@ -54,7 +55,9 @@ class GoogleCalenderRepository implements IGoogleCalenderFacade {
     event.end = end;
 
     //insert event to user calender
-    final result = await calendar.events.insert(event, calendarId);
+    final result = await calendar.events
+        .insert(event, calendarId)
+        .catchError((e) => throw e);
 
     client.close();
     return result;
