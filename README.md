@@ -10,7 +10,8 @@ University students.
 ## Technology Stack and Platforms
 This app uses flutter mobile ui framework for its frontend and firebase platform to store timetables of different courses.
 
-## Targets Android devices
+## Target 
+Android devices
 
 ## Features
 Create notes, reminders on personal calendar
