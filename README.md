@@ -1,22 +1,22 @@
-## Class Planner Mobile App
+# Class Planner Mobile App
 
 
-# Purpose of the App
+## Purpose of the App
 Class planner is a mobile app that digitises the manual school timetable to better organise a students daily schedule by displaying list of lesson available on specific day based on course selected.  
 
-# Target Audience
+## Target Audience
 University students.
 
-# Technology Stack and Platforms
+## Technology Stack and Platforms
 This app uses flutter mobile ui framework for its frontend and firebase platform to store timetables of different courses.
 
-# Targets Android devices
+## Targets Android devices
 
-# Features
+## Features
 Create notes, reminders on personal calendar
 View timetables for different courses 
 
-# Designs
+## Designs
 ![](screenshots/splashpage.png)
 ![](screenshots/onboardingpage.png)
 ![](screenshots/homepage.png)
