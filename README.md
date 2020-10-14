@@ -2,7 +2,8 @@
 
 
 ## Purpose of the App
-Class planner is a mobile app that digitises the manual school timetable to better organise a students daily schedule by displaying list of lesson available on specific day based on course selected.  
+Class planner is a mobile app that digitises the manual school timetable to better organise a students daily schedule by displaying 
+list of lesson available on specific day based on course selected.  
 
 ## Target Audience
 University students.
@@ -15,7 +16,7 @@ Android devices
 
 ## Features
 Create notes, reminders on personal calendar
-View timetables for different courses 
+ View timetables for different courses 
 
 ## Designs
 ![](screenshots/splashpage.png)
