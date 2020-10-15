@@ -14,6 +14,9 @@ This app uses flutter mobile ui framework for its frontend and firebase platform
 ## Target 
 Android devices
 
+## Link
+https://play.google.com/store/apps/details?id=com.swyype.class_planner
+
 ## Features
 Create notes, reminders on personal calendar
  View timetables for different courses 
